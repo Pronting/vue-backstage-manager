@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style>
+.el-aside{
+  overflow: visible;
+}
 </style>

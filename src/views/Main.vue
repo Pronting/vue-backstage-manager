@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>我是Main</h1>
     <el-container>
       <el-aside width="200px">
         <common-aside/>
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <common-header/>
+        </el-header>
         <el-main>
           <router-view/>
         </el-main>
@@ -17,12 +18,20 @@
 
 <script>
 import CommonAside from "@/components/CommonAside";
+import CommonHeader from "@/components/CommonHeader";
+
 export default {
   name: "Main",
-  components:{CommonAside}
+  components: {CommonHeader, CommonAside}
 }
 </script>
 
 <style scoped>
+.el-header {
+  padding: 0;
 
+}
+.el-aside{
+  overflow: visible;
+}
 </style>
