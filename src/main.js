@@ -9,6 +9,8 @@ import VueRouter from 'vue-router'
 import router from "@/router";
 //挂载Vuex
 import store from '@/store'
+//引入mock
+import '@/api/mock'
 
 //关闭生产提示
 Vue.config.productionTip = false

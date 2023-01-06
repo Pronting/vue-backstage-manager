@@ -8,7 +8,7 @@
            text-color="#fff"
            active-text-color="#ffd04b"
   >
-    <h3>通用后台管理系统</h3>
+    <h3>{{ isCollapse ? '后台' : '通用后台管理系统' }}</h3>
     <el-menu-item @click="clickMenu(item)" :index="item.name" v-for="item in noChildren" :key="item.name">
       <i :class="`el-icon-${item.icon}`"></i>
       <span slot="title">{{ item.label }}</span>
@@ -120,7 +120,8 @@ body {
 }
 
 .el-menu {
-  height: 100vh;
+  height: 100%;
+  border-right: none;
 
   h3 {
     color: #fff;
